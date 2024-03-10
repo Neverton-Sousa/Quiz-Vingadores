@@ -3,9 +3,11 @@ const popupInfo  = document.querySelector('.popup-info');
 const exitBtn = document.querySelector('.exit-btn');
 const main = document.querySelector('.main');
 const continueBtn = document.querySelector('.continue-btn');
-const quizsection = document.querySelector('.quiz-section');
+const quizSection = document.querySelector('.quiz-section');
 const quizBox = document.querySelector('.quiz-box');
 const resultBox = document.querySelector('.result-box');
+const tryAgainBtn = document.querySelector('.tryAgain-btn');
+const goHomeBtn = document.querySelector('.goHome-btn');
 
 starBtn.onclick = ()=>{
     popupInfo.classList.add('active');
@@ -18,7 +20,7 @@ exitBtn.onclick = ()=>{
 }
 
 continueBtn.onclick = ()=>{
-    quizsection.classList.add("active");
+    quizSection.classList.add("active");
     popupInfo.classList.remove("active");
     main.classList.remove("active");
     quizBox.classList.add("active");
@@ -27,6 +29,35 @@ continueBtn.onclick = ()=>{
     questionCounter(1);
     headerScore();
 }
+
+
+tryAgainBtn.onclick = ()=>{
+    quizBox.classList.add('active');
+    resultBox.classList.remove("active");
+
+    questionCount = 0;
+    questionNumb = 1;
+    userScore =0;
+
+    showQuestions(questionCount); 
+    questionCounter(questionNumb);
+    
+    headerScore();
+}
+
+goHomeBtn.onclick = ()=>{
+    quizSection.classList.remove('active');
+    nexBtn.classList.remove('active');
+    resultBox.classList.remove("active");
+
+    questionCount = 0;
+    questionNumb = 1;
+    userScore =0;
+
+    showQuestions(questionCount); 
+    questionCounter(questionNumb);
+}
+
 
 let questionCount = 0;
 let questionNumb = 1;
@@ -105,6 +136,26 @@ function headerScore(){
 }
 
 function showResultBox(){
-    quizBox.classList.remove('active')
-    resultBox.classList.add('active')
+    quizBox.classList.remove('active');
+    resultBox.classList.add('active');
+
+    const scoreText = document.querySelector('.score-text');
+    scoreText.textContent = `Seu Score é: ${userScore} de ${questions.length}`;
+
+    const circularProgress =  document.querySelector('.circular-progress');
+    const progressValue = document.querySelector('.progress-value');
+    let progressStarValue = -1;
+    let progressEndValue = (userScore / questions.length) * 100;
+    let speed = 20;
+
+    let progress = setInterval(() => {
+        progressStarValue++;
+
+        progressValue.textContent= `${progressStarValue}%`;
+        circularProgress.style.background = `conic-gradient(#c40094 ${progressStarValue * 3.6}deg, rgba(255,255,255,.1) 0deg)`;
+        
+        if(progressStarValue == progressEndValue){
+            clearInterval(progress);
+        }
+    }, speed);
 }
