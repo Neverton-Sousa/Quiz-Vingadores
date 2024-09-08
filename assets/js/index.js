@@ -127,12 +127,12 @@ function optionSelected(answer){
 }
 function questionCounter(index){
     const questionTotal = document.querySelector('.question-total');
-    questionTotal.textContent = `${index} of ${questions.length} Questions`
+    questionTotal.textContent = `${index} de ${questions.length} Questões`
 }
 
 function headerScore(){
     const headerScoreText = document.querySelector(".header-score");
-    headerScoreText.textContent= `Score: ${userScore} / ${questions.length}`;
+    headerScoreText.textContent= `Pontuação: ${userScore} / ${questions.length}`;
 }
 
 function showResultBox(){
@@ -140,7 +140,7 @@ function showResultBox(){
     resultBox.classList.add('active');
 
     const scoreText = document.querySelector('.score-text');
-    scoreText.textContent = `Seu Score é: ${userScore} de ${questions.length}`;
+    scoreText.textContent = `Sua Pontuação é: ${userScore} de ${questions.length}`;
 
     const circularProgress =  document.querySelector('.circular-progress');
     const progressValue = document.querySelector('.progress-value');

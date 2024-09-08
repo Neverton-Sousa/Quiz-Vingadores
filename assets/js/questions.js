@@ -1,57 +1,63 @@
 let questions = [
-    {
-        numb: 1,
-        question: "What does HTML stand for?",
-        answer: "C. Hyper Text Markup Language",
-        options: [
-            "A. Hyper Type Multi Language",
-            "B. Hyper Text Multiple Language",
-            "C. Hyper Text Markup Language",
-            "D. Home Text Multi Language"
-        ]
-    },
-    {
-        numb: 2,
-        question: "What does CSS stand for?",
-        answer: "A. Cascading Style Sheet",
-        options: [
-            "A. Cascading Style Sheet",
-            "B. Cute Style Sheet",
-            "C. Computer Style Sheet",
-            "D. Codehal Style Sheet"
-        ]
-    },
-    {
-        numb: 3,
-        question: "What does PHP stand for?",
-        answer: "A. Hypertext Preprocessor",
-        options: [
-            "A. Hypertext Preprocessor",
-            "B. Hometext Programming",
-            "C. Hypertext Preprogramming",
-            "D. Programming Hypertext Preprocessor"
-        ]
-    },
-    {
-        numb: 4,
-        question: "What does SQL stand for?",
-        answer: "D. Structured Query Language",
-        options: [
-            "A. Strength Query Language",
-            "B. Stylesheet Query Language",
-            "C. Science Question Language",
-            "D. Structured Query Language"
-        ]
-    },
-    {
-        numb: 5,
-        question: "What does XML stand for?",
-        answer: "D. Extensible Markup Language",
-        options: [
-            "A. Excellent Multiple Language",
-            "B. Explore Multiple Language",
-            "C. Extra Markup Language",
-            "D. Extensible Markup Language"
-        ]
-    }
+  {
+    // Pergunta 1: Sobre a identidade secreta do Homem de Ferro
+    numb: 1,
+    question: "Qual o nome verdadeiro do Homem de Ferro?",
+    answer: "C. Tony Stark",
+    options: [
+      "A. Bruce Banner",
+      "B. Steve Rogers",
+      "C. Tony Stark",
+      "D. Peter Parker",
+    ],
+  },
+  {
+    // Pergunta 2: Sobre a arma principal do Capitão América
+
+    numb: 2,
+    question: "Qual a principal arma do Capitão América?",
+    answer: "B. Escudo de vibranium",
+    options: [
+      "A. Martelo Mjolnir",
+      "B. Escudo de vibranium",
+      "C. Arco e flecha",
+      "D. Garras de adamantium",
+    ],
+  },
+  {
+    // Pergunta 3: Sobre o local onde os Vingadores se reúnem
+    numb: 3,
+    question: "Qual o nome da sede dos Vingadores?",
+    answer: "A. Torre dos Vingadores",
+    options: [
+      "A. Torre dos Vingadores",
+      "B. Fortaleza de Asgard",
+      "C. Wakanda",
+      "D. Planeta Xandar",
+    ],
+  },
+  {
+    // Pergunta 4: Sobre um evento importante no Universo Marvel
+    numb: 4,
+    question: "Qual evento uniu os Vingadores pela primeira vez?",
+    answer: "D. A Invasão Chitauri",
+    options: [
+      "A. Guerra Civil",
+      "B. Saga da Fénix Negra",
+      "C. Guerra Kree-Skrull",
+      "D. A Invasão Chitauri",
+    ],
+  },
+  {
+    // Pergunta 5: Sobre uma habilidade de um Vingador
+    numb: 5,
+    question: "Qual a habilidade especial da Viúva Negra?",
+    answer: "C. Mestre em artes marciais",
+    options: [
+      "A. Super força",
+      "B. Voar",
+      "C. Mestre em artes marciais",
+      "D. Manipular o tempo",
+    ],
+  },
 ];
