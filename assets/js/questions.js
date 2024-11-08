@@ -59,5 +59,5 @@ let questions = [
       "C. Mestre em artes marciais",
       "D. Manipular o tempo",
     ],
-  },
+  }
 ];
